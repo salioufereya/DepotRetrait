@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>S01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url(https://www.nicepng.com/png/detail/206-2069241_real-de-madrid-cartoon.png); background-size: cover; ">
+    <div class="container dflex jcc aic fdc">
+        <span class="error">  </span>
+        <div class="tete">
+            <div class="yokkNit">  <span class=" fa-beat-fade">  </span> 
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <div class="Search">   
+                <input type="number" class="inputSearch" placeholder="  Search users By phone" style="color:white" >
+            </div>
+            <ul class="listUsers"></ul>
+        </div>
+        <div class="card">
+            <div class="infos dflex">
+                <div class="info flex2 dflex fdc jcsb">
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Nom :</span>
+                        <span class="data" id="lastname">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Prénom :</span>
+                        <span class="data" id="firstname">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Téléphone :</span>
+                        <span class="data" id="phone">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Email :</span>
+                        <span class="data" id="email">...</span>
+                    </div>
+                    <div class="row dflex jcsb aic">
+                        <span class="label">Solde :</span>
+                        <span class="data" id="solde">...</span>
+                    </div>
+                </div>
+                <div class="photo flex1  skeleton">
+                    <img  alt="...">
+                </div>
+            </div>
+            <hr>
+            <div class="transactions  fdc">
+                <div class="title" style="flex: 3;">
+                    <span>Transactions (<code class="code">...</code>)</span>
+                    <!-- <button class="btnAnnuler">Annuler</button> -->
+                    <span id="ajout" class="btn-detail">+</span>
+                </div>
+                <div class="content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Numero</th>
+                                <th>Date</th>
+                                <th>Sens</th>
+                                <th>Montant</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tbody">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="form">
+                <div class="form-group">
+                    <label for="mnt">Montant</label>
+                    <input type="number" id="mnt" placeholder="Montant..." class="from-control">
+                </div>
+                <div class="form-group">
+                    <label for="trans">Transaction</label>
+                    <select id="trans" class="from-control">
+                        <option value="0"> Choisir </option>
+                        <option value="d">Depot</option>
+                        <option value="r">Retrait</option>
+                    </select>
+                    <label for="trans">Téléphone</label>
+                    <ul class="list"></ul>
+                    <input type="number"   style="width: 200px; height: 30px;"  class="numeroDepotRetrait"/>
+                </div>
+                <button type="button" class="enregistrer">Enregistrer</button>
+            </div>
+        </div>
+        <div class="navigation">
+            <button type="button" class="next"> suivant </button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+     <!--modal-->
+     <div class="modal center close">
+        <div class="modal-content">
+            <div class="modal-header center">
+                <h2>Add Users</h2>
+            </div>
+            <div class="modal-body center gridCol">
+                <div class="col1">
+                    <label for=""> Nom</label>
+                    <label for=""> Prenom</label>
+                    <label for=""> Téléphone</label>
+                    <label for=""> Email</label>  
+                    <label for=""> Photo</label> 
+                    <label for=""> Solde</label>
+                    <!-- <label for=""> Transactions</label> -->
+                </div>
+                <div class="col2">
+                    <input type="text" class="lastNameAdd">
+                    <input type="text" class="firstNameAdd">
+                    <input type="number" class="phoneAdd">
+                    <input type="email" class="emailAdd">
+                    <input type="text" class="photoAdd">
+                    <input type="number" class="soldeAdd">
+                    <!-- <input type="text" class="transaAdd"> -->
+                </div>
+            </div>
+            <div class="erreur">       
+            </div>
+            <div class="modal-footer center">
+                <buton class="okModal">Add </buton>
+                <buton class="closeModal" id="closeModal">Close</buton>
+            </div>
+        </div>
+    </div>
+    <!--fin modal-->
+
+    <script src="script.js"></script>
+</body>
+</html>

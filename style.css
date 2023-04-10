@@ -1,0 +1,465 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.dflex{
+    display: flex;
+  
+}
+
+.dflex.jcc{
+    justify-content: center;
+}
+
+.dflex.jcsb{
+    justify-content: space-between;
+}
+
+.dflex.aic{
+    align-items: center;
+}
+
+.dflex.fdc{
+    flex-direction: column;
+    
+}
+
+.flex1{
+    flex: 1;
+}
+
+.flex2{
+    flex: 2;
+}
+
+
+/* ------------------------ */
+
+
+.card{
+    height: 60vh;
+    width: 60%;
+    background-color: #27566B;
+    padding: 10px;
+    color: #E5E8E9;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    
+    
+}
+
+img{
+    width: 100%;
+    height: 100%;
+   
+}
+
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+.skeleton{
+    position: relative;
+
+}
+
+.skeleton::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  /*  background: linear-gradient(90deg,#eee,#f9f9f9,#eee);*/
+  background-image: url(images/spinn.webp);
+    background-size: cover;
+    animation: skeleton 1s infinite reverse;
+}
+
+
+@keyframes skeleton {
+    0%{
+        background-position: -100% 0;
+    }
+    100%{
+        background-position: 100% 0;
+    }
+    
+}
+
+
+
+
+
+
+
+.photo{
+    border-left: 2px solid #E5E8E9;
+    padding-left: 10px;
+    
+}
+
+.infos{
+    height: 40%;
+}
+
+.info{
+    padding-right: 10px;
+}
+
+.row .label{
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.row .data{
+    font-size: 1.5rem;
+}
+
+.title{
+    font-size: 1.5rem;
+}
+
+.btn-detail{
+    font-weight: 900;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.form{
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 100%;
+    background-color: #27566B;
+    /* background-color: #06293D;27566B */
+    visibility: hidden;
+}
+
+.visible{
+    visibility: visible;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.from-control{
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+}
+
+.form-group label{
+    font-size: 1.20rem;
+}
+
+input.from-control{
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: #799eb0;
+    outline: none;
+}
+
+select{
+    outline: none;
+    border-radius: 5px;
+}
+
+.form button{
+    width: 100%;
+    background-color: #06293D;
+    color: #E5E8E9;
+    outline: none;
+    border: 1px solid #799eb0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.next{
+    padding: 5px 20px;
+    font-size: 1.09rem;
+    margin-top: 10px;
+    background-color: #27566B;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #E5E8E9;
+}
+
+button{
+    cursor: pointer;
+}
+
+table{
+    width: 100%;
+    background-color: #799eb0;
+}
+tr,td{
+    text-align: center;
+    line-height: 30px;
+}
+
+.form.hide{
+    display: none;
+}
+.transactions{  
+overflow-y: scroll;
+   height: 50%;
+    
+} 
+.list-items{
+    background-color: red;
+    height: 500px;
+    width: 500px;
+}
+
+.error{
+  font-size: x-large;
+  color: white;
+  font-weight: bold; 
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  animation: error 5s infinite ;
+  background-color: red;
+  height: 50px;
+  border-radius: 15px;
+ 
+}
+
+
+.suggestion{
+    font-size: 22px;
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.suggestion:hover{
+    background-color: green;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+@keyframes error {
+    
+    0%{
+        top: 2%;
+        left: 0%;
+    }25%
+    {
+        top: 2%;
+        left: 50%;   
+    }
+    50%
+    {
+        top: 2%;
+        left: 50%;   
+    }
+    90%
+    {
+        top: 2%;
+        left: 50%;   
+    }
+
+    90%
+    {
+        top: 2%;
+     left:   50%;
+    }
+    
+   100%{
+    top: 2%;
+    display: none;
+   }
+    
+}
+
+/*modal */
+
+
+.modal {
+    background-color: rgba(0, 0, 0.0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: x-large;
+    background-color: #02141f30;
+    color: white;
+   
+
+}
+
+.modal-content {
+    width: 700px;
+   /* background-color: rgb(240, 235, 235);*/
+    background-color: #27566B;
+    padding: 10px;
+    border-radius: 10%;
+
+}
+.modal-content label{
+    width: 500px;
+}
+
+.modal-footer {
+    margin-top: 15px;
+    height: 50px;
+    color: #fff;
+
+}
+.modal-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.modal-footer .closeModal {
+    margin-left: 25px;
+    background-color: red;
+    padding: 5px;
+    border-radius: 15px;
+}
+.col1{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.col2 input{
+    height: 25px;
+    border: none;
+    border-radius: 15px;
+}
+
+.modal-footer .okModal {
+    margin-left: 25px;
+    background-color: green;
+    padding: 5px;
+    border-radius: 15px;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.close {
+    visibility: hidden;
+}
+
+
+
+/*fin modal*/
+
+.tete{
+    display: flex;
+    flex-direction: row;
+   position: relative;
+
+    
+}
+
+
+.inputSearch{
+    width: 300px;
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color: #27566B;
+    font-size: x-large;
+}
+.Search{
+    padding: 15px;
+    font-size: x-large;
+    font-weight: bold;
+    position: absolute;
+   right: 145%;
+    bottom: 20%;
+    display: flex;
+    flex-direction: row;
+}
+.yokkNit{
+    padding: 15px;
+    font-size: x-large;
+    font-weight: bold;
+    position: absolute;
+    left: 250%;
+    bottom: 20%;
+    
+}
+.yokkNit .fa-user-plus{
+    cursor: pointer;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.listUsers{
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+    color: #fff;
+    font-size: x-large;
+    background-color: #27566B;
+    transition: 2s;
+    border-radius: 10px;
+    
+}
+
+.listUser:hover{
+
+    background-color: green;
+    width: 50%;
+    border-radius: 15px;
+    transition: .4s;
+    
+}
+
+.btnAnnuler{
+    color: white;
+    background-color: red;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
+
+.btnAnnu{
+    color: white;
+    background-color: red;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+}
